@@ -2,15 +2,13 @@ import React, { Component } from "react";
 
 class Counter extends Component {
   state = {
-    count: 0,
+    count: 1,
     imageUrl: "https://picsum.photos/200",
   };
   render() {
     return (
       <div className="alert alert-primary" role="alert">
         <h1>My first react app :)</h1>
-        <h2> :)) </h2>
-        <h3>lalala</h3>
         <img
           src={this.state.imageUrl}
           alt="random-slika"
@@ -20,8 +18,7 @@ class Counter extends Component {
             border: "1px solid white",
           }}
         ></img>
-
-        <span className="badge bg-primary m-2">{this.formatCount()}</span>
+        <span className={this.pickClassName()}>{this.formatCount()}</span>
         <button className="btn btn-secondary btn-sm">Increment</button>
       </div>
     );
@@ -30,6 +27,12 @@ class Counter extends Component {
   formatCount() {
     const { count } = this.state;
     return count === 0 ? "Zero" : count;
+  }
+
+  pickClassName() {
+    //dinamicko renderovanje
+    let name = "badge m-2 bg-";
+    return (name += this.state.count === 0 ? "warning" : "primary");
   }
 }
 
