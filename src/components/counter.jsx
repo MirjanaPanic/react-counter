@@ -8,6 +8,9 @@ class Counter extends Component {
   render() {
     return (
       <div className="alert alert-primary" role="alert">
+        <h1>My first react app :)</h1>
+        <h2> :)) </h2>
+        <h3>lalala</h3>
         <img
           src={this.state.imageUrl}
           alt="random-slika"
