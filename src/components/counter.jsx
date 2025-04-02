@@ -13,7 +13,7 @@ class Counter extends Component {
           alt="random-slika"
           style={{
             display: "block",
-            marginBottom: "30px",
+            marginBottom: "20px",
             border: "1px solid white",
           }}
         ></img>
