@@ -11,7 +11,11 @@ class Counter extends Component {
         <img
           src={this.state.imageUrl}
           alt="random-slika"
-          style={{ display: "block", marginBottom: "30px" }}
+          style={{
+            display: "block",
+            marginBottom: "30px",
+            border: "1px solid white",
+          }}
         ></img>
 
         <span className="badge bg-primary m-2">{this.formatCount()}</span>
